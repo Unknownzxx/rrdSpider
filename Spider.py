@@ -27,7 +27,7 @@ first = 1
 
 def LoginRRD(username, password):
     try:
-        print(u'准备登录人人贷网站...')
+        print(u'准备登录网站...')
         # driver.get("https://www.we.com/pc/passport/index/login")
         driver.get("https://www.renrendai.com/login");
         global first
@@ -97,8 +97,7 @@ def parse_userinfo(loanid):
         try:
             cursor.execute(
                 "INSERT INTO tbl_bmessage(loan_id, nick_name, credit_rating, name, identify, age, degree, marriage, loan, loc, overdue, success, total, overdue_amount, pay_num, non_pay, serious_overdue, income, estate, hose_loan, car, car_loan, other, industy, scale, career, city, work_time, value_date, err, risk_level, repayment_mode, repayment_source, frd, sex)VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
-                (loanid, userinfo.get('昵称', 'null'), userinfo.get('信用评级', 'null'), userinfo.get('姓名', 'null'),
-                 userinfo.get('身份证号', 'null'), userinfo.get('年龄', 'null'), userinfo.get('学历', 'null'),
+                (loanid, userinfo.get('信用评级', 'null'), userinfo.get('年龄', 'null'), userinfo.get('学历', 'null'),
                  userinfo.get('婚姻', 'null'), userinfo.get('申请借款', 'null'), userinfo.get('信用额度', 'null'),
                  userinfo.get('逾期金额', 'null'), userinfo.get('成功借款', 'null'), userinfo.get('借款总额', 'null'),
                  userinfo.get('逾期次数', 'null'), userinfo.get('还清笔数', 'null'), userinfo.get('代还本息', 'null'),
