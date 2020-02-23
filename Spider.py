@@ -9,8 +9,8 @@ from selenium.webdriver.firefox.options import Options  # use headless browser l
 
 time_start = time.clock()
 
-username = "13011960190"  # 在此填入你的用户名
-password = "wyt970727."  # 在此填入你的密码
+username = "username"  # 在此填入你的用户名
+password = "password"  # 在此填入你的密码
 # driver = webdriver.Firefox()
 
 # 使用Firefox自带的无头浏览器登录
